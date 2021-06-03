@@ -16,3 +16,10 @@ For an introduction to Galaxy, consult the [intro material](https://training.gal
 ## Contributing to the Galaxy Training tutorials
 
 The Galaxy Training website is built from a GitHub [repository](https://github.com/galaxyproject/training-material) using the Jekyll site builder. There are some guides on [to how to write tutorials and contribute](https://training.galaxyproject.org/training-material/topics/contributing/). Contributions can either be added via the command line (with a local copy of the training materials) or via the Github web interface.
+
+If you want to save on bandwidth when downloading a local copy of the Galaxy training material, do a *shallow clone* using this command:
+
+```
+git clone --depth=1 https://github.com/galaxyproject/training-material.git
+```
+
