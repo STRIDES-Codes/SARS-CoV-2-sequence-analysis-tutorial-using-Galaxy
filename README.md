@@ -69,6 +69,8 @@ There is an existing tutorial, [From NCBI's Sequence Read Archive (SRA) to Galax
     - Rerun the **Pangolin** with UShER model selected as *Yes*. UShER model is a new model for lineage identification
 13. Phylogenetic lineage designation with **Nextclade**. 
 
+Find the link to the tutorial [here](https://4000-fuchsia-damselfly-0ht5y5jf.ws-eu08.gitpod.io/training-material/topics/variant-analysis/tutorials/sars-cov-2-amplicon/tutorial.html)
+
 Note: When you excute your run take note of the following colors:
 color | Description
 ----- | ----------- 
