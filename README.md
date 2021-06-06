@@ -41,38 +41,38 @@ There is an existing tutorial, [From NCBI's Sequence Read Archive (SRA) to Galax
 
 2. ☑ ☐ Trimming the FASTQ reads with **fastp** tool. Search for this tool in the search tools icon of Galaxy.
     - input is Paired collection of the given name above (step 2 ii)
-3. ☐ ☐ Mapping of your reads with **BWA MEM**. Select this tool in the search tools icon. 
+3. ☑ ☐ Mapping of your reads with **BWA MEM**. Select this tool in the search tools icon. 
     - Input is the the output of fastp above (step 3)
     - Reference genome select *Use a genome from history and build index* from the drop down arrow
     - Select *paired collection* from the Single or Paired-end reads drop down arrow
     - Select the first and second set of reads appropriately
-4. ☐ ☐ Compute mapping statistics using **samtools stats**. Search for this tool in the search tools icon of Galaxy.
-5. ☐ ☐ Trimming the aligned BAM reads with **ivar trim**. Search for this tool in the search tools icon of Galaxy.
+4. ☑ ☐ Compute mapping statistics using **samtools stats**. Search for this tool in the search tools icon of Galaxy.
+5. ☑ ☐ Trimming the aligned BAM reads with **ivar trim**. Search for this tool in the search tools icon of Galaxy.
     - Input is bam dataset
     - Select *Built-in* from the Source of primer information
     - Select *SARS-CoV-2-ARTICv3* from the Primer scheme name
     - Select *Yes* for Include reads not ending in any primer binding sites?
-6.  ☐ ☐ Variant annotation with **ivar variants**
+6. ☑ ☐ Variant annotation with **ivar variants**
     - Enter Quality score (FASTQ quality) of 20
     - Enter Frequency threshold of 0.7, good for targeting common variants.
-7. ☐ ☐ Convert the iVar tabular varaiants output to a .vcf file format with **iVar Variants to VCF** tool.
-8. ☐ ☐ Rename the reference sequence with **Text transformation with sed**
+7. ☑ ☐ Convert the iVar tabular varaiants output to a .vcf file format with **iVar Variants to VCF** tool.
+8. ☑ ☐ Rename the reference sequence with **Text transformation with sed**
     - Paste this **/^[^#]/s/^[^\t]+\t/NC_045512.2\t/** sed code in the SED Program window.
-9. ☐ ☐ Annotate the SARS-CoV-2 variants with the **SnpEff eff** tool. Make sure you use the SARS-CoV-2 version
+9. ☑ ☐ Annotate the SARS-CoV-2 variants with the **SnpEff eff** tool. Make sure you use the SARS-CoV-2 version
     - Make sure you select your reference sequence as named above (step 8)
-10. ☐ ☐ Call consensus from the aligned BAM file with **ivar consensus**.
+10. ☑ ☐ Call consensus from the aligned BAM file with **ivar consensus**.
     - input is the trimmed BAM reads.
     - Enter 20 for Minimum quality score threshold 
     - Enter 0.7 for Minimum frequency threshold
     - Enter 20 for Minimum depth 
     - Select *No* for Exclude regions with smaller depth than the minimum threshold
     - Select *Yes* for Use N instead of - for regions with less than minimum coverage
-11. ☐ ☐ Rename the FASTA header with **Text transformation with sed** to be the name of the sample.
+11. ☑ ☐ Rename the FASTA header with **Text transformation with sed** to be the name of the sample.
     - Paste this **/^>/s/Consensus_(.*)_threshold_.*/\1/** sed code in the SED Program window.
-12. ☐ ☐ Phylogenetic lineage assignment with **Pangolin**.
+12. ☑ ☐ Phylogenetic lineage assignment with **Pangolin**.
     - Leave the *Download the latest Pangolin from web* option as default for the pangoLEARN source section
     - Rerun the **Pangolin** with UShER model selected as *Yes*. UShER model is a new model for lineage identification
-13. ☐ ☐ Phylogenetic lineage designation with **Nextclade**. 
+13. ☑ ☐ Phylogenetic lineage designation with **Nextclade**. 
 
 Find the link to the tutorial [here](https://4000-fuchsia-damselfly-0ht5y5jf.ws-eu08.gitpod.io/training-material/topics/variant-analysis/tutorials/sars-cov-2-amplicon/tutorial.html)
 
