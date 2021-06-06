@@ -39,7 +39,7 @@ There is an existing tutorial, [From NCBI's Sequence Read Archive (SRA) to Galax
     i.  Export the **SARS-CoV-2 Amplicon Sequencing** to the History as collection.
     ii. Make FASTQ datasets into **list of pairs** and enter the name of your new collection (your prefered name)
 
-2. ☐ ☐ Trimming the FASTQ reads with **fastp** tool. Search for this tool in the search tools icon of Galaxy.
+2. ☑ ☐ Trimming the FASTQ reads with **fastp** tool. Search for this tool in the search tools icon of Galaxy.
     - input is Paired collection of the given name above (step 2 ii)
 3. ☐ ☐ Mapping of your reads with **BWA MEM**. Select this tool in the search tools icon. 
     - Input is the the output of fastp above (step 3)
