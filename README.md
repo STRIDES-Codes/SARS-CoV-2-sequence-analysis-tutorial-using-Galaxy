@@ -52,6 +52,7 @@ There is an existing tutorial, [From NCBI's Sequence Read Archive (SRA) to Galax
     - Select *Built-in* from the Source of primer information
     - Select *SARS-CoV-2-ARTICv3* from the Primer scheme name
     - Select *Yes* for Include reads not ending in any primer binding sites?
+6.  ☐ ☐ Variant annotation with **ivar variants**
     - Enter Quality score (FASTQ quality) of 20
     - Enter Frequency threshold of 0.7, good for targeting common variants.
 7. ☐ ☐ Convert the iVar tabular varaiants output to a .vcf file format with **iVar Variants to VCF** tool.
