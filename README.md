@@ -52,12 +52,12 @@ There is an existing tutorial, [From NCBI's Sequence Read Archive (SRA) to Galax
     - Select *Built-in* from the Source of primer information
     - Select *SARS-CoV-2-ARTICv3* from the Primer scheme name
     - Select *Yes* for Include reads not ending in any primer binding sites?
-    - Enter Quality score (FASTQ qaulity) of 20
+    - Enter Quality score (FASTQ quality) of 20
     - Enter Frequency threshold of 0.7, good for targeting common variants.
 7. ☐ ☐ Convert the iVar tabular varaiants output to a .vcf file format with **iVar Variants to VCF** tool.
 8. ☐ ☐ Rename the reference sequence with **Text transformation with sed**
     - Paste this **/^[^#]/s/^[^\t]+\t/NC_045512.2\t/** sed code in the SED Program window.
-9. ☐ ☐ Annonate the SARS-CoV-2 variants with the **SnpEff eff** tool. Make sure you use the SARS-CoV-2 version
+9. ☐ ☐ Annotate the SARS-CoV-2 variants with the **SnpEff eff** tool. Make sure you use the SARS-CoV-2 version
     - Make sure you select your reference sequence as named above (step 8)
 10. ☐ ☐ Call consensus from the aligned BAM file with **ivar consensus**.
     - input is the trimmed BAM reads.
